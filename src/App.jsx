@@ -1,4 +1,4 @@
-import Cabecalho from "./components/Cabecalho";
+import Lista from "./components/Lista";
 import Rodape from "./components/rodape";
 import Secao from "./components/secao";
 import ViteLogo from "./assets/vite.svg";
@@ -24,7 +24,7 @@ return(
   <>
   {/* vamos criar  um cabeçalho com o header,  um h1 com um título e uma lista ul com itens link */}
 
-  <Cabecalho/>
+  <Lista/>
 
   {/* Vamos criar uma seção com uma section, uma div com 2 paragrafo, cada um com 3 linhas de lorem e depois dos parágrafos, uma imagem */}
   <Secao viteLogoProps={ViteLogo} viteAltProps={ViteAlt}/>
