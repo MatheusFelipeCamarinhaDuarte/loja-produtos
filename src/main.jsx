@@ -12,10 +12,11 @@ import Produtos from './routes/Produtos.jsx';
 
 const router = createBrowserRouter([
   { path: '/', element: <App/>,
+  errorElement: <Erro404 />,
   children: [
     {path: '/', element: <Home />},
     {path: '/produtos', element: <Produtos />},
-    {path: '/editar/produtos:id', element: <EditarProduto />}
+    {path: '/editar/produtos:id', element: <EditarProdutos />}
   ]
   
   }

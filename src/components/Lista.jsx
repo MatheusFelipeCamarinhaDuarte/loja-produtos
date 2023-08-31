@@ -4,13 +4,13 @@ export default function Lista() {
         <>
             <Cabecalho>
                 <li>
-                    <a href="#">Item-1</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="#">Item-2</a>
+                    <a href="/produtos">Produtos</a>
                 </li>
                 <li>
-                    <a href="#">Item-3</a>
+                    <a href="/editar/produtos:id">Editar Produtos</a>
                 </li>
             </Cabecalho>
     </>
