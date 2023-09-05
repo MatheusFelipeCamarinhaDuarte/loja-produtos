@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function EditarProdutos() {
   return (
-    <div>EditarProdutos</div>
+    <div>Editar Produtos</div>
   )
 }
