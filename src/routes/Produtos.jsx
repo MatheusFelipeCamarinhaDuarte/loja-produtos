@@ -39,7 +39,7 @@ export default function Produtos() {
 
         <tfoot className={classes.tableFooter}>
           <tr>
-            <td colSpan={6}>PRODUTOS</td>
+            <td colSpan={6}>PRODUTOS <Link to={'/adicionar/produtos'}>+</Link></td>
           </tr>
         </tfoot>
       </table>
