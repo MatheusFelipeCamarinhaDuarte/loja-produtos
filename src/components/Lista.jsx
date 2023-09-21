@@ -24,6 +24,10 @@ export default function Lista() {
         <li>
         <Link to="/editar/produtos/3">Produto - 3</Link>
         </li>
+
+        <li>
+          <Link to='/adicionar/produtos'>Adicionar Produtos</Link>
+        </li>
       </Cabecalho>
     </>
   );

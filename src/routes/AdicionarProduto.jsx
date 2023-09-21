@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { ListaProdutos } from "../components/ListaProdutos";
+import { useState } from "react";
 
 export default function AdicionarProduto() {
 
@@ -9,64 +10,49 @@ export default function AdicionarProduto() {
 
     const {id} = useParams(); 
     let contadorID = ListaProdutos.length
+    
     let produtoNovo = ListaProdutos.filter( produto => produto.id == (contadorID+1) );
     
+    const [produtoId, setProdutoId] = useState(0)
+    const [produto, setProduto] = useState({
+        id:0,
+        nome:"",
+        desc:"",
+        preco:"",
+        img:"",
+    })
 
 
-
-const handleSubmit = (event) =>{
-    let nome = document.getElementById("idNome").value
-    let desc = document.getElementById("idDesc").value
-    let preco = document.getElementById("idPreco").value
-    let contadorID = ListaProdutos.length
-    event.preventDefault();
-    console.log(contadorID,produtoNovo)
-        
-    produtoNovo = {id: (contadorID+1), nome: nome, desc: desc, preco: preco, img:'https://picsum.photos/seed/picsum/50/50'}
-    console.log(ListaProdutos)
-    ListaProdutos.splice(contadorID+1, 0, produtoNovo);
-
-    alert("Produto adicionado com sucesso!");
-
-    navigate("/produtos")
-
-}
-    
 
     return (
 
+<div>
+    <h1>Adicionar produto</h1>
     <div>
-        <h1>Adicionar Produtos</h1>
+        <form action="">
+            <fieldset>
+                <legend>Cadastrar Produto</legend>
+                <div>
+                    <label htmlFor="idNome">Nome: </label>
+                    <input type="text" name='nome' id='idNome' value={produto.nome} />
+                </div>
+                <div>
+                    <label htmlFor="idDesc">Descrição: </label>
+                    <input type="number" name='desc' id='idDesc' value={produto.desc} />
+                </div>
+                <div>
+                    <label htmlFor="idPreco">Preço: </label>
+                    <input type="text" name='preco' id='idpreco' value={produto.preco} />
+                </div>
+                <div>
+                    <label htmlFor="idImg">Imagem: </label>
+                    <input type="text" name='imagem' id='idImg' value={produto.img} />
+                </div>
+            </fieldset>
+        </form>
 
-        <div>
-            <form onSubmit={handleSubmit}>
-                <fieldset>
-                    <legend>Produto a Ser Adicionado</legend>
-                    <div>
-                        <input type="hidden" name = "id" />
-                    </div>
-                    <div>
-                        <label htmlFor="idNome">Nome:</label>
-                        <input type="text" name='Nome' id='idNome' />
-                    </div>
-                    <div>
-                        <label htmlFor="idDesc">Descrição:</label>
-                        <input type="text" name='desc' id='idDesc'/>
-                    </div>
-                    <div>
-                        <label htmlFor="idPreco">Preço:</label>
-                        <input type="text" name='preco' id='idPreco'/>
-                    </div>
-                    <div>
-                        <button>CRIAR produto</button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-
-
-    
     </div>
+</div>
 
 
     )
