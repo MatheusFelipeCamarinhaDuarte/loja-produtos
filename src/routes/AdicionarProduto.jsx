@@ -3,7 +3,7 @@ import {ListaProdutos} from "../components/ListaProdutos";
 import { useNavigate } from "react-router-dom";
 
 export default function AdicionarProduto() {
-    document.title = 'Inserir Produto';
+    document.title = 'Adicionar Produto';
     const navigate = useNavigate();
 
     // const [produtoId, setProdutoId] = useState(0);

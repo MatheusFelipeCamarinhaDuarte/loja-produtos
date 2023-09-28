@@ -30,7 +30,8 @@ export default function Produtos() {
       <p>Os Melhores Produtos do Mercado</p>
 
       {open ? <ModalInserir open={open} setOpen={setOpen}/> : ""}
-      <button onClick={()=>setOpen(true)}>OPEN-MODAL</button>
+
+      <Link onClick={()=> setOpen(true)}>Cadastro de Produtos</Link>
 
       <table className={classes.estilo}>
         <thead className={classes.tableHeaders}>

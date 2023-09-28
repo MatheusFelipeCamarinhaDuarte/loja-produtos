@@ -1,20 +1,17 @@
-export default function Cabecalho(props) {
-  {
-    /* Vamos criar um cabecalho com um header, um titulo h1 e 
-      uma lista ul com itens com links*/
-  }
+import { createElement } from "react";
 
-  return(
+export default function Cabecalho(props) {
+  return (
     <>
-        <header>
-    <h1>Vite + React / Matt </h1>
-    <ul>
-          {props.children.map((item,indice) => {
-              return item
-          })
-      }
-    </ul>
-  </header>
+      <header>
+        <h1>Produtos</h1>
+        <ul>
+          {props.children.map((item, indice) => {
+            createElement("li", { key: indice }, item);
+            return item;
+          })}
+        </ul>
+      </header>
     </>
-  )
+  );
 }

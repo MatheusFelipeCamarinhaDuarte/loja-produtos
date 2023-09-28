@@ -6,7 +6,7 @@ export default function EditarProdutos() {
 
   document.title = "Editar Produtos";
 
-  //criando um mecanismo de navegação com useNavigate()
+  //Criando um mecanismo de navegação com useNavigate()
   const navigate = useNavigate();
 
   //Receber o ID do produto pelo HOOK useParams( );
@@ -45,7 +45,6 @@ export default function EditarProdutos() {
     alert("Produto alterado com sucesso!");
 
     navigate("/produtos")
-
   }
   
 
